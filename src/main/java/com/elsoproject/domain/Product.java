@@ -5,17 +5,36 @@ public class Product {
 		private String name;
 		private int price;
 		private boolean megaPack;
+		private int amount;
 		
 	   public Product() {
 		   
 	   }
+		
+		public Product(String name, int price, boolean megaPack, int amount) {
+			super();
+			this.name = name;
+			this.price = price;
+			this.megaPack = megaPack;
+			this.amount=amount;
+		}
 		
 		public Product(String name, int price, boolean megaPack) {
 			super();
 			this.name = name;
 			this.price = price;
 			this.megaPack = megaPack;
+			
 		}
+		
+		public int getAmount() {
+			return amount;
+		}
+
+		public void setAmount(int amount) {
+			this.amount = amount;
+		}
+
 		public String getName() {
 			return name;
 		}

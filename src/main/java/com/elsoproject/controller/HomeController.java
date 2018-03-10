@@ -26,8 +26,9 @@ public class HomeController {
 	
 
     @PostMapping("/index")
-    public String sumProducts(@ModelAttribute List<Product> products, Model model) {
-        model.addAttribute("result", hs.getSumProducts(products) );
+    public String sumProducts(@ModelAttribute Product products, Model model) {
+    	System.out.println("alma");
+        model.addAttribute("products", products );
       
     	return "result";
         

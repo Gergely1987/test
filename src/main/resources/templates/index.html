@@ -5,14 +5,13 @@
 </head>
 <body>
 
-	<form action="#" th:action="@{/index}" th:object="${products}"
-		method="post">
+	<form action="#" th:action="@{/index}" th:object="${products}" method="post">
 		<table id="productsTable">
 			<tr th:each="product : ${products}">
-				<th th:text=${product.name}>termék neve</th>
-				<th th:text=${product.price}>ár</th>
-				<th th:text=${product.megaPack}>megapack-e</th>
-				<th><input type="text" id=${product.name}>
+				<th th:text="${product.name}">termék neve</th>
+				<th th:text="${product.price}">ár</th>
+				<th th:text="${product.megaPack}">megapack-e</th>
+				<th><input type="text" ></th>
 			</tr>
 		</table>
 

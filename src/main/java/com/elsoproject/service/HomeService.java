@@ -28,6 +28,7 @@ public class HomeService {
 		for(Product p:totalProduct) {
 			sum+=p.getPrice();
 		}
+		
 		return sum;
 	}
 }
