@@ -31,4 +31,9 @@ public class HomeService {
 		
 		return sum;
 	}
+	
+	public int price (String i) {
+	return 	Integer.parseInt(i)*2000;
+		
+	}
 }

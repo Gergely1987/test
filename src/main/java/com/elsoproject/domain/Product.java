@@ -51,6 +51,11 @@ public class Product {
 		public void setMegaPack(boolean megaPack) {
 			this.megaPack = megaPack;
 		}
+
+		@Override
+		public String toString() {
+			return "Product [name=" + name + ", price=" + price + ", megaPack=" + megaPack + ", amount=" + amount + "]";
+		}
 		
 		
 }

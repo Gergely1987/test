@@ -5,15 +5,9 @@
 <body>
 <div>Result oldal</div>
 
-<table id="productsTable">
-			<tr th:each="product : ${products}">
-				<th th:text="${product.name}">termék neve</th>
-			</tr>
-		</table>
-	<div>
 		Végeredmény:
-		<output th:text="${product.price}"> </output>
-	</div>
+		<output th:text="${price}"> </output>
+
 	<a href="/index">vissza az indexre</a>
 </body>
 </html>
