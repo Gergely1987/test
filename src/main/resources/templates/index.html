@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymleaf.org">
+<head>
+<title th:text="${pageTitle}">oldal címe</title>
+</head>
+<body>
+
+	<form action="#" th:action="@{/index}" th:object="${products}"
+		method="post">
+		<table id="productsTable">
+			<tr th:each="product : ${products}">
+				<th th:text=${product.name}>termék neve</th>
+				<th th:text=${product.price}>ár</th>
+				<th th:text=${product.megaPack}>megapack-e</th>
+				<th><input type="text" id=${product.name}>
+			</tr>
+		</table>
+
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+	
+</body>
+</html>
