@@ -5,14 +5,13 @@ public class Product {
 		private String name;
 		private int price;
 		private boolean megaPack;
-		private int amount;
+		private String amount;
 		
 	   public Product() {
 		   
 	   }
 		
-		public Product(String name, int price, boolean megaPack, int amount) {
-			super();
+		public Product(String name, int price, boolean megaPack, String amount) {
 			this.name = name;
 			this.price = price;
 			this.megaPack = megaPack;
@@ -20,18 +19,17 @@ public class Product {
 		}
 		
 		public Product(String name, int price, boolean megaPack) {
-			super();
 			this.name = name;
 			this.price = price;
 			this.megaPack = megaPack;
 			
 		}
 		
-		public int getAmount() {
+		public String getAmount() {
 			return amount;
 		}
 
-		public void setAmount(int amount) {
+		public void setAmount(String amount) {
 			this.amount = amount;
 		}
 

@@ -29,7 +29,6 @@ public class HomeController {
     public String sumProducts(@ModelAttribute Product products, Model model) {
     	System.out.println("alma");
         model.addAttribute("products", products );
-      
     	return "result";
         
     }
