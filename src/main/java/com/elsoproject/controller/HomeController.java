@@ -31,7 +31,6 @@ public class HomeController {
 
 		model.addAttribute("pageTitle", "Mi kis Webshopunk");
 		model.addAttribute("products", hs.getProducts());
-		System.out.println(hs.getProducts());
 		return "index";
 	}
 

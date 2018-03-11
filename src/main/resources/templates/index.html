@@ -11,7 +11,7 @@
 				<td th:text="${product.name}">termék neve</td>
 				<td th:text="${product.price}">ár</td>
 				<td th:text="${product.megaPack}">megapack-e</td>
-				<td><input type="text" id="amount" th:text="${product.amount}" placeholder="darabszám"/></td>
+				<td><input type="text" id="amount" th:field="*{product.amount}" placeholder="darabszám"/></td>
 			</tr>
 		</table>
 
