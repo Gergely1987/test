@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymleaf.org">
+
 <head>
-<title th:text="${pageTitle}">oldal címe</title>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">oldal cÃ­me</title>
 </head>
+
 <body>
 
-	<form action="#" th:action="@{/index}" th:object="${products}" method="post">
-		<table id="productsTable">
-			<tr th:each="product : ${products}">
-				<td th:text="${product.name}">termék neve</td>
-				<td th:text="${product.price}">ár</td>
-				<td th:text="${product.megaPack}">megapack-e</td>
-				<td><input type="text" id="amount" th:text="${product.amount}" placeholder="darabszám"/></td>
-			</tr>
-		</table>
-
-		<p>
-			<input type="submit" value="Submit" /> <input type="reset"
-				value="Reset" />
-		</p>
-	</form>
-	
-<!-- 		<form action="#" th:action="@{/index}" th:object="${product}" method="post"> -->
-<!-- 		<table id="productsTable"> -->
-<!-- 			<tr> -->
-<!-- 				<td th:text="${product.name}">termék neve</td> -->
-<!-- 				<td th:text="${product.price}">ár</td> -->
-<!-- 				<td th:text="${product.megaPack}">megapack-e</td> -->
-<!-- 				<td><input type="text" id="amount" th:field="*{amount}" placeholder="darabszám"/></td> -->
-<!-- 			</tr> -->
-<!-- 		</table> -->
-
-<!-- 		<p> -->
-<!-- 			<input type="submit" value="Submit" /> <input type="reset" -->
-<!-- 				value="Reset" /> -->
-<!-- 		</p> -->
-<!-- 	</form> -->
-	
+    <form action="#" th:action="@{/index}" th:object="${productsModel}" method="post">
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>termÃ©k neve</th>
+                    <th>Ã¡r</th>
+                    <th>megapack-e</th>
+                    <th>darabszÃ¡m</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product, stat : *{products}">
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.megaPack}"></td>
+                    <td>
+                        <input type="hidden" th:field="*{products[__${stat.index}__].name}" />
+                        <input type="hidden" th:field="*{products[__${stat.index}__].price}" />
+                        <input type="hidden" th:field="*{products[__${stat.index}__].megaPack}" />
+                        <input type="text" th:field="*{products[__${stat.index}__].amount}" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+        </p>
+    </form>
 </body>
+
 </html>

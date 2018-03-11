@@ -3,12 +3,15 @@ package com.elsoproject.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.elsoproject.domain.Product;
 
+@Service
 public class HomeService {
 
-	public ArrayList<Product>getProducts(){
-		ArrayList<Product> products =new ArrayList();
+	public List<Product>getProducts(){
+	    List<Product> products =new ArrayList<>();
 		
 		Product salami=new Product("téliszalámi",2000,false);
 		Product rubberDuck=new Product("gumikacsa",3000,false);
